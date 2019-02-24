@@ -29,8 +29,8 @@ public class SupportResistLinesServiceImpl {
          int size = (int) ((maxPrice.getHigh() - minPrice.getLow()) / 0.02 + 1);
         Stream<Double> intervals = Stream.iterate(minPrice.getLow(), d -> d += 0.02).limit(size);
 
-        final Map<Map<Double, Double>, Long> collect = candles.stream().
-                map(c -> c.getOpen()).collect(groupingBy(d -> test(d), Collectors.counting()));
+/*        final Map<Map<Double, Double>, Long> collect = candles.stream().
+                map(c -> c.getOpen()).collect(groupingBy(d -> test(d), Collectors.counting()));*/
     }
 
     private void fillMaxMinPrices(Candle c1){

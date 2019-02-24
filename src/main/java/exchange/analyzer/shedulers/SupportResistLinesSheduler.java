@@ -6,6 +6,6 @@ import org.springframework.stereotype.Component;
 public class SupportResistLinesSheduler extends CandlestickComponentSheduler {
     @Override
     protected void process() {
-        getCandles(5000L);
+        getCandles(300L);
     }
 }

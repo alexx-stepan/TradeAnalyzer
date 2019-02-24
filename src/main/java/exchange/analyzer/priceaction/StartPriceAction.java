@@ -15,6 +15,6 @@ public class StartPriceAction {
     List<Classifier> classifiers;
     public void process(TreeSet<Candle> candles){
         candles.size();
-        classifiers.get(0).is(candles);
+        classifiers.get(1).is(candles);
     }
 }

@@ -14,7 +14,10 @@ import exchange.analyzer.priceaction.StartPriceAction;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Scheduled;
+import org.springframework.web.client.RestTemplate;
 
+import java.util.Map;
 import java.util.TreeSet;
 import java.util.stream.Collectors;
 
@@ -25,6 +28,9 @@ public abstract class CandlestickComponentSheduler extends Sheduler {
 
     @Autowired
     private StartPriceAction startPriceAction;
+
+    @Autowired
+    private RestTemplate restTemplate;
 
     public void getCandles(Long size){
         BasicConstant.SUPPORTED_INSTRUMENT.forEach(currency ->
